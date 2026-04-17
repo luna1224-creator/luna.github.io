@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星星奔向我 | 摄影作品集</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; color: #333; line-height: 1.6; padding: 40px; background: #fff; }
+        
+        header { text-align: center; margin-bottom: 80px; }
+        h1 { font-size: 24px; font-weight: 400; letter-spacing: 2px; margin-bottom: 10px; }
+        p { font-size: 14px; color: #888; letter-spacing: 1px; }
+
+        .section { margin-bottom: 80px; }
+        .section-title { font-size: 18px; margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 10px; font-weight: 300; }
+        
+        /* 核心修改：使用 column 实现瀑布流，适应横竖不同比例 */
+        .gallery { 
+            column-count: 3; /* 大屏显示 3 列 */
+            column-gap: 30px; 
+        }
+        .gallery img { 
+            width: 100%; 
+            height: auto; 
+            display: block; 
+            margin-bottom: 30px; /* 图片间的垂直间距 */
+            transition: opacity 0.3s; 
+        }
+        .gallery img:hover { opacity: 0.8; }
+
+        /* 响应式调整：屏幕较小时自动变为 2 列或 1 列 */
+        @media (max-width: 900px) { .gallery { column-count: 2; } }
+        @media (max-width: 600px) { .gallery { column-count: 1; } }
+
+        footer { text-align: center; font-size: 12px; color: #ccc; margin-top: 100px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>星星奔向我</h1>
+        <p>人文 / 街头 / 人像摄影师</p>
+    </header>
+
+    <div class="section">
+        <h2 class="section-title">记录 (Street / Urban)</h2>
+        <div class="gallery">
+            <img src="_DSF3238.JPG" alt="街头作品1">
+            <img src="DSCF2782.JPG" alt="街头作品2">
+            <img src="IMG_20230126_0806062723.JPG" alt="街头作品3">
+            <img src="DSCF1586.JPG" alt="街头作品4">
+            <img src="_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=8576099542765645753&skey=@crypt_b5597ac9_2482c4a30938dc9be28e6c894e5d3491&mmweb_appid=wx_webfilehelper.jpg" alt="街头作品5">
+            <img src="_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=1393730812079629469&skey=@crypt_b5597ac9_2482c4a30938dc9be28e6c894e5d3491&mmweb_appid=wx_webfilehelper.jpg" alt="街头作品6">
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">人像 (Portraits)</h2>
+        <div class="gallery">
+            <img src="IMG_20230205_080606.jpg" alt="人像作品1">
+            <img src="IMG_20230327_08060.jpg" alt="人像作品2">
+            <img src="IMG_20231224_080606.JPG" alt="人像作品3">
+            <img src="DSCF4403.jpg" alt="人像作品4">
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">静物 (Still Life)</h2>
+        <div class="gallery">
+            <img src="_DSF3109.jpg" alt="静物作品1">
+            <img src="IMG_20230527_080606.jpg" alt="静物作品2">
+            <img src="DSCF4664.jpg" alt="静物作品3">
+        </div>
+    </div>
+
+    <footer>© 2026 星星奔向我</footer>
+
+</body>
+</html>
